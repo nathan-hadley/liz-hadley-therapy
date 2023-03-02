@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liz Hadley Therapy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "layout", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-left">
+        <%= link_to 'Liz Hadley Therapy', root_path, class: 'home-link' %>
+      </div>
+      <nav>
+        <%= link_to 'About', about_path,
+                    class: ('nav-link' + (' active' if current_page?(about_path))) %>
+        <%= link_to 'Areas of Focus', specialties_path,
+                    class: ('nav-link' + ('active' if current_page?(specialties_path))) %>
+        <%= link_to 'FAQs', faq_path,
+                    class: ('nav-link' + ('active' if current_page?(faq_path))) %>
+        <%= link_to 'Resources', resources_path,
+                    class: ('nav-link' + ('active' if current_page?(resources_path))) %>
+      </nav>
+      <div class="header-right">
+        <%= link_to 'Contact', contact_path, class: 'contact-link' %>
+      </div>
+    </header>
+
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <p>Let's Connect</p>
+      <%= link_to 'Schedule a Consultation', contact_path, class: 'button' %>
+    </footer>
+  </body>
+</html>
