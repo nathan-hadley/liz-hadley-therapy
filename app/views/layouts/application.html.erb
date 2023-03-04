@@ -9,6 +9,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "layout", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&display=swap"
+      as="style" rel="stylesheet preload prefetch"
+    >
   </head>
 
   <body>
@@ -17,14 +22,20 @@
         <%= link_to 'Liz Hadley Therapy', root_path, class: 'home-link' %>
       </div>
       <nav>
-        <%= link_to 'About', about_index_path,
-                    class: ('nav-link' + (' active' if current_page?(about_index_path))) %>
-        <%= link_to 'Areas of Focus', specialties_path,
-                    class: ('nav-link' + ('active' if current_page?(specialties_path))) %>
-        <%= link_to 'FAQs', faq_index_path,
-                    class: ('nav-link' + ('active' if current_page?(faq_index_path))) %>
-        <%= link_to 'Resources', resources_path,
-                    class: ('nav-link' + ('active' if current_page?(resources_path))) %>
+        <ul>
+          <li>
+            <%= link_to 'About', about_index_path, class: ('active' if current_page?(about_index_path)) %>
+          </li>
+          <li>
+            <%= link_to 'Areas of Focus', specialties_path, class: ('active' if current_page?(specialties_path)) %>
+          </li>
+          <li>
+            <%= link_to 'FAQs', faq_index_path, class: ('active' if current_page?(faq_index_path)) %>
+          </li>
+          <li>
+            <%= link_to 'Resources', resources_path, class: ('active' if current_page?(resources_path)) %>
+          </li>
+        </ul>
       </nav>
       <div class="header-right">
         <%= link_to 'Contact', contact_index_path, class: 'contact-link' %>
@@ -36,7 +47,7 @@
     </div>
 
     <footer>
-      <p>Let's Connect</p>
+      <h2>Let's connect:</h2>
       <%= link_to 'Schedule a Consultation', contact_index_path, class: 'button' %>
     </footer>
   </body>
