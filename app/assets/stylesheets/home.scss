@@ -85,16 +85,15 @@
 
     .text-box {
       flex-direction: column;
-      width: 100%;
+      width: 70vw;
       height: auto;
+      right: 10%;
     }
 
     .img-container {
-      width: 100%;
-      max-width: 300px;
-      height: 300px;
+      width: 60vw;
+      left: 10%;
       margin-bottom: -50px;
-      left: 100px;
     }
   }
 }
