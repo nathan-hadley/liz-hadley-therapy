@@ -79,21 +79,19 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .text-img-block {
-    flex-direction: column-reverse;
-
+    margin: 0 30px;
+    min-width: auto;
     .text-box {
-      flex-direction: column;
-      width: 70vw;
-      height: auto;
-      right: 10%;
+      width: 100%;
     }
 
     .img-container {
-      width: 60vw;
-      left: 10%;
-      margin-bottom: -50px;
+      display: none;
+      img {
+        display: none;
+      }
     }
   }
 }

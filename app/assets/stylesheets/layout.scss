@@ -98,3 +98,11 @@ footer {
   }
 }
 
+@media (max-width: 480px) {
+ header {
+   padding: 0;
+   .home-link { display: none; }
+   .contact-link { display: none; }
+   ul { padding: 0; }
+ }
+}
