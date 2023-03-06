@@ -1,0 +1,39 @@
+.about-page {
+  .about-header-block {
+    background-color: var(--color-light-tan);
+
+    h1 {
+      text-align: center;
+    }
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .about-block-1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    img {
+      width: 100%
+    }
+  }
+
+  .about-block-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    img {
+      width: 100%
+    }
+  }
+
+  .about-block-3 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    img {
+      width: 100%
+    }
+  }
+}
