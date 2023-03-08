@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources 'home', only: :index
   resources 'about', only: :index
-  resources 'areas_of_focus', only: :index
+  get 'areas-of-focus', to: 'areas_of_focus#index', as: 'areas_of_focus'
   resources 'faq', only: :index
   resources 'resources', only: :index
   resources 'contact', only: :index
