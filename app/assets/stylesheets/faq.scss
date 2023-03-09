@@ -57,3 +57,21 @@
     padding: 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .faq-page {
+    margin: 30px;
+
+    .fees-block {
+      min-width: auto;
+
+      .img-container {
+        display: none;
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+}

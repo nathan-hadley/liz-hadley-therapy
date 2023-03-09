@@ -23,11 +23,14 @@
       </div>
       <nav>
         <ul>
+          <li class="mobile-only">
+            <%= link_to 'Home', root_path, class: ('active' if current_page?(root_path)) %>
+          </li>
           <li>
             <%= link_to 'About', about_index_path, class: ('active' if current_page?(about_index_path)) %>
           </li>
           <li>
-            <%= link_to 'Areas of Focus', areas_of_focus_path, class: ('active' if current_page?(areas_of_focus_path)) %>
+            <%= link_to 'Focus Areas', focus_areas_path, class: ('active' if current_page?(focus_areas_path)) %>
           </li>
           <li>
             <%= link_to 'FAQs', faq_index_path, class: ('active' if current_page?(faq_index_path)) %>
@@ -46,9 +49,11 @@
       <%= yield %>
     </div>
 
-    <footer>
-      <h2>Let's connect:</h2>
-      <%= link_to 'Schedule a Consultation', contact_index_path, class: 'button' %>
-    </footer>
+    <% unless current_page?(contact_index_path) %>
+      <footer>
+        <h2>Let's connect:</h2>
+        <%= link_to 'Schedule a Consultation', contact_index_path, class: 'button' %>
+      </footer>
+    <% end %>
   </body>
 </html>

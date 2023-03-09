@@ -1,4 +1,4 @@
-.areas-of-focus-page {
+.focus-areas-page {
   padding: 20px;
   h2 {
     text-align: center;
@@ -74,10 +74,11 @@
 }
 
 @media (max-width: 480px) {
-  .areas-of-focus-page {
+  .focus-areas-page {
     .text-img-block {
       margin: 50px 0;
-      min-width: 300px;
+      min-width: auto;
+      height: auto;
 
       .text-box {
         width: 100%;
