@@ -31,10 +31,9 @@ header {
   }
 
   .contact-link {
-    color: var(--color-white);
+    color: var(--color-white) !important;
     background-color: var(--color-font);
     padding: 10px 30px;
-    z-index: 9999;
   }
 
   nav ul {
@@ -99,10 +98,9 @@ footer {
 
   .button {
     font-size: var(--font-size-sm);
-    color: var(--color-white);
+    color: var(--color-white) !important;
     background-color: var(--color-font);
     padding: 20px 60px;
-    z-index: 9999;
   }
 }
 
