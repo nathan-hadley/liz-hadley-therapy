@@ -13,6 +13,7 @@ ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1"
 
 # Update gems and bundler
+RUN gem install rubygems-update -v 3.4.22
 RUN gem update --system --no-document && \
     gem install -N bundler
 
