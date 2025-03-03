@@ -1,6 +1,15 @@
 require_relative "boot"
 
-require "rails/all"
+# Pick the frameworks you want:
+# We're explicitly NOT requiring active_record/railtie to remove database dependencies
+require "active_model/railtie"
+require "action_controller/railtie"
+require "action_view/railtie"
+require "action_mailer/railtie"
+require "active_job/railtie"
+require "action_cable/engine"
+require "sprockets/railtie"
+require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -18,5 +27,11 @@ module Lht
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    
+    # Explicitly state that we're not using ActiveRecord
+    config.generators.orm = false
+    
+    # Disable Active Record explicitly
+    config.active_record = false if defined?(config.active_record)
   end
 end
